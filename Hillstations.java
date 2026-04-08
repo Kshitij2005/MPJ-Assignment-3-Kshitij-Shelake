@@ -1,51 +1,69 @@
 class Hillstations {
-    void famousfood() {
-        System.out.println("General hill station food");
+
+    void famousFood() {
+        System.out.println("Popular food of hill station");
     }
-    void famousfor() {
-        System.out.println("General hill station attraction");
+
+    void famousPlace() {
+        System.out.println("Known attractions of hill station");
     }
 
     public static void main(String[] args) {
-        Hillstations h;
 
-        h = new Manali();
-        h.famousfood();
-        h.famousfor();
+        Hillstations ref;
 
-        h = new Darjeeling();
-        h.famousfood();
-        h.famousfor();
+        ref = new Manali();
+        ref.famousFood();
+        ref.famousPlace();
 
-        h = new Ooty();
-        h.famousfood();
-        h.famousfor();
+        ref = new Darjeeling();
+        ref.famousFood();
+        ref.famousPlace();
+
+        ref = new Ooty();
+        ref.famousFood();
+        ref.famousPlace();
     }
 }
 
+// Subclass 1
 class Manali extends Hillstations {
-    void famousfood() {
-        System.out.println("Manali: Siddu and Babru");
+
+    @Override
+    void famousFood() {
+        System.out.println("Manali Special: Siddu, Babru");
     }
-    void famousfor() {
-        System.out.println("Manali: Snow and adventure sports");
+
+    @Override
+    void famousPlace() {
+        System.out.println("Manali Famous For: Snowfall & Adventure");
     }
 }
 
+// Subclass 2
 class Darjeeling extends Hillstations {
-    void famousfood() {
-        System.out.println("Darjeeling: Momos and Thukpa");
+
+    @Override
+    void famousFood() {
+        System.out.println("Darjeeling Special: Momos, Thukpa");
     }
-    void famousfor() {
-        System.out.println("Darjeeling: Tea gardens and sunrise");
+
+    @Override
+    void famousPlace() {
+        System.out.println("Darjeeling Famous For: Tea Gardens & Sunrise");
     }
 }
 
+// Subclass 3
 class Ooty extends Hillstations {
-    void famousfood() {
-        System.out.println("Ooty: Varkey and homemade chocolate");
+
+    @Override
+    void famousFood() {
+        System.out.println("Ooty Special: Chocolates & Varkey");
     }
-    void famousfor() {
-        System.out.println("Ooty: Nilgiri hills and toy train");
+
+    @Override
+    void famousPlace() {
+        System.out.println("Ooty Famous For: Hills & Toy Train");
     }
 }
